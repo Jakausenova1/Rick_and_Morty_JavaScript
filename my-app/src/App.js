@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import {
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Table,
+} from "@mui/material";
 
-function App() {
+const App = () => {
+
+  // useEffect(() => {
+  //   fetch("http..")
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data));
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TableContainer component={Paper}>
+        <Table aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Name</TableCell>
+              <TableCell align="right">Photo</TableCell>
+              <TableCell align="right">Episode</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell component="th" scope="row">
+                s
+              </TableCell>
+              <TableCell align="right">sss</TableCell>
+              <TableCell align="right">ss</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </>
   );
-}
+};
 
 export default App;
+
+// <Container sx={{display:"flex"}}>
+//   <Box component="span" sx={{ p: 10, border: '1px dashed grey' }}>Name:</Box>
+//   <Box component="span" sx={{ p: 10, border: '1px dashed grey' }}>Photo:</Box>
+//   <Box component="span" sx={{ p: 10, border: '1px dashed grey' }}>Episode</Box>
+// </Container>
